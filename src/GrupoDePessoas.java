@@ -1,16 +1,11 @@
-import java.util.Arrays;
-import java.util.Scanner;
+import java.io.OutputStream;
+import java.util.*;
 
 public class GrupoDePessoas {
 
-    public static void main(String[] Args) {
+    public static void main(String Args[]) {
 
       Scanner s = new Scanner(System.in);
-
-        String genero1= "masculino";
-        String genero2 = "Masculino";
-        String genero3 = "feminino";
-        String genero4 = "Feminino";
 
         String listaDeNomes;
         String genero;
@@ -21,20 +16,32 @@ public class GrupoDePessoas {
         System.out.println("Digite seu genero ; ");
         genero = s.nextLine();
 
-        if (genero.equalsIgnoreCase(genero2)){
-            System.out.println("Você faz parte do grupo de pessoas do sexo masculinas : " + listaDeNomes + " - " + genero1 );
+        List<String> grupoFeminino= new ArrayList<>();
+
+        List<String> grupoMasculino = new ArrayList<>();
+
+
+        if(genero.equalsIgnoreCase("feminino")){
+            grupoFeminino.add("");
         }
-        else if (genero.equalsIgnoreCase(genero3)) {
-            System.out.println("Você faz parte do grupo de pessoas do sexo femininas : " + listaDeNomes + " - " + genero4 );
+        else if (genero.equalsIgnoreCase("masculino")){
+            grupoMasculino.add("");
         }
-
-
-
-
+        System.out.println(grupoFeminino.size() );
+        System.out.println(grupoMasculino.size());
 
 
 
     }
+
+
+
+
+
+
+
+
 }
+
 
 
