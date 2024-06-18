@@ -1,4 +1,5 @@
-import java.io.OutputStream;
+package br.com.danielsilva;
+
 import java.util.*;
 
 public class GrupoDePessoas {
@@ -20,17 +21,21 @@ public class GrupoDePessoas {
 
         List<String> grupoMasculino = new ArrayList<>();
 
-
         if(genero.equalsIgnoreCase("feminino")){
-            grupoFeminino.add("");
+            grupoFeminino.add(listaDeNomes);
         }
         else if (genero.equalsIgnoreCase("masculino")){
-            grupoMasculino.add("");
+            grupoMasculino.add(listaDeNomes);
         }
-        System.out.println(grupoFeminino.size() );
-        System.out.println(grupoMasculino.size());
 
+        long stream = grupoFeminino.stream()
+                .filter(gene -> genero.equalsIgnoreCase("feminino"))
+                .count();
+        System.out.println(stream);
 
+//        System.out.println(grupoFeminino );
+//        System.out.println(grupoMasculino );
+          System.out.println(stream);
 
     }
 
